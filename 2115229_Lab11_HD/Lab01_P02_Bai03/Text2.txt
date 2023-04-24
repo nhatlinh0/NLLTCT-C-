@@ -1,0 +1,14 @@
+int File_Array1(char *filename, int a[MAX], int &n)
+{
+ ifstream in(filename); //Mo de doc
+if (!in)
+ return 0; //Khong thanh cong
+ n = 0;
+while (!in.eof())
+ {
+ in>>a[n];
+ n++;
+ }
+ in.close();
+return 1; //Thanh cong
+} 
